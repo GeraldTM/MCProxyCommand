@@ -13,9 +13,6 @@ To install this mod on fabric minecraft servers these requirements must be met:
 
 Both the fabric mod and the velocity plugin are available on [modrinth](https://modrinth.com/mod/proxy-command-reloaded) with slug `proxy-command-reloaded`
 
-The project source is available on [github/GeraldTM](https://github.com/GeraldTM/MCProxyCommand) with the latest
-readme [here](https://github.com/GeraldTM/MCProxyCommand/blob/master/README.md).
-
 
 ## Usage instructions
 
