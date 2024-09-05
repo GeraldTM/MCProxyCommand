@@ -12,7 +12,7 @@
   },
   "license": "MIT",
   "icon": "assets/proxycommand/icon.png",
-  "environment": "*",
+  "environment": "server",
   "entrypoints": {
     "main": [
       "de.michiruf.proxycommand.fabric.ProxyCommandMod"
@@ -20,9 +20,9 @@
   },
   "mixins": [],
   "depends": {
-    "fabricloader": ">=0.14.21",
+    "fabricloader": ">=0.15.10",
     "fabric": "*",
-    "minecraft": "1.20.1",
-    "fabricproxy-lite": ">=2.6.0"
+    "minecraft": "1.21",
+    "fabricproxy-lite": ">=2.8.0"
   }
 }
