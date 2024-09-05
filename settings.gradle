@@ -2,10 +2,7 @@ pluginManagement {
     repositories {
         maven {
             name = 'Fabric'
-            url = 'https://maven.fabricmc.net/'   
-        }
-        maven {
-            url "https://plugins.gradle.org/m2/"
+            url = 'https://maven.fabricmc.net/'
         }
         gradlePluginPortal()
     }
@@ -15,3 +12,4 @@ rootProject.name = 'proxy-command'
 include 'common'
 include 'fabric-mod'
 include 'velocity-plugin'
+include 'velocity-runner'
