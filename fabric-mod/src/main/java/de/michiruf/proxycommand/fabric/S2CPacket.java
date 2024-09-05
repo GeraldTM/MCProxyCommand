@@ -18,7 +18,7 @@ public class S2CPacket {
 
   public record ProxyCommandPacket(String command) implements CustomPayload {
     public static final CustomPayload.Id<ProxyCommandPacket> PACKET_ID = new CustomPayload.Id<>(
-      Identifier.of(ProxyCommandConstants.COMMAND_PACKET_ID)
+      new Identifier(ProxyCommandConstants.COMMAND_PACKET_ID)
     );
     public static final PacketCodec<PacketByteBuf, ProxyCommandPacket> PACKET_CODEC = PacketCodec.of(
       (value, buf) -> buf.writeString(value.command),
