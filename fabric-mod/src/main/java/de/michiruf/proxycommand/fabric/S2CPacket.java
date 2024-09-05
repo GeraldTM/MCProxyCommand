@@ -1,19 +1,24 @@
 package de.michiruf.proxycommand.fabric;
 
 import de.michiruf.proxycommand.common.ProxyCommandConstants;
+import java.util.UUID;
 import net.fabricmc.fabric.api.networking.v1.PayloadTypeRegistry;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
+import net.fabricmc.fabric.impl.registry.sync.packet.DirectRegistryPacketHandler.Payload;
+import net.minecraft.block.entity.VaultBlockEntity.Server;
 import net.minecraft.network.PacketByteBuf;
+import net.minecraft.network.RegistryByteBuf;
 import net.minecraft.network.codec.PacketCodec;
 import net.minecraft.network.packet.CustomPayload;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Uuids;
 
 public class S2CPacket {
 
   public record ProxyCommandPacket(String command) implements CustomPayload {
     public static final CustomPayload.Id<ProxyCommandPacket> PACKET_ID = new CustomPayload.Id<>(
-      Identifier.of(ProxyCommandConstants.COMMAND_PACKET_ID)
+      new Identifier(ProxyCommandConstants.COMMAND_PACKET_ID)
     );
     public static final PacketCodec<PacketByteBuf, ProxyCommandPacket> PACKET_CODEC = PacketCodec.of(
       (value, buf) -> buf.writeString(value.command),

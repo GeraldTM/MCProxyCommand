@@ -1,0 +1,17 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+dependencies {
+    // File got from https://papermc.io/downloads#Velocity
+    implementation files('lib/velocity-3.3.0-SNAPSHOT-389.jar')
+
+    implementation project(':velocity-plugin')
+}
+
+application {
+    mainClassName = 'com.velocitypowered.proxy.MyMain'
+}
+
+tasks.run.workingDir = 'run'
