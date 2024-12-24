@@ -1,15 +1,15 @@
 plugins {
-    id 'fabric-loom' version '1.6-SNAPSHOT'
+    id 'fabric-loom' version '1.9-SNAPSHOT'
     id 'com.modrinth.minotaur' version '2.+'
 }
 
 // Fabric Properties. Check these on https://modmuss50.me/fabric.html
-def minecraft_version='1.21'
+def minecraft_version='1.21.4'
 
-def yarn_mappings='1.21+build.9'
-def loader_version='0.15.11'
+def yarn_mappings='1.21.4+build.2'
+def loader_version='0.16.9'
 
-def fabric_version='0.100.8+1.21'
+def fabric_version='0.113.0+1.21.4'
 
 repositories {
     // NOTE This should currently be not needed, but to fiddle around with this dependency issue
@@ -45,12 +45,12 @@ dependencies {
 
     // NOTE To work with the problems above, place these mods inside the mods folder
     // List of mods:
-    // * Fabric-API 0.84.0+1.20.1
-    // * FabricProxy-Lite 2.6.0
+    // * Fabric-API 0.113.0+1.21.4
+    // * FabricProxy-Lite 2.9.0
 
     // FabricProxy-Lite including transitives
     // https://github.com/OKTW-Network/FabricProxy-Lite
-    modImplementation 'maven.modrinth:fabricproxy-lite:v2.8.0'
+    modImplementation 'maven.modrinth:fabricproxy-lite:v2.9.0'
     modImplementation 'com.moandjiezana.toml:toml4j:0.7.2'
 
 
